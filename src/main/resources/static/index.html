@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Library Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📚 Library Management System</h1>
+
+    <input type="number" id="bookId" placeholder="Book ID">
+
+    <input type="text" id="bookName" placeholder="Book Name">
+
+    <input type="text" id="authorName" placeholder="Author Name">
+
+    <input type="number" id="price" placeholder="Price">
+
+    <div class="btn-group">
+        <button onclick="saveBook()">Save</button>
+        <button onclick="fetchAllBooks()">Fetch All</button>
+    </div>
+
+    <div class="btn-group">
+        <button onclick="fetchBookById()">Fetch By Id</button>
+        <button onclick="deleteBook()">Delete</button>
+    </div>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
