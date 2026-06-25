@@ -25,27 +25,32 @@ public class LibraryManagementController {
 	@Autowired
 	LibraryManagementService libraryManagementService;
 	
+	// Save orInsert the data
 	@PostMapping
 	public String insertData(@RequestBody LibraryManagementDto libraryManagementDto) {
 		System.out.println(libraryManagementDto);
 		return libraryManagementService.insertData(libraryManagementDto);
 	}
+	//Fetch the data by ID
 	@GetMapping
 	public Object fetchById(@RequestParam int id) {
 //		int id=libraryManagementDto.getBookId();
 //		  System.out.println("Controller Id = " + id);
 		return libraryManagementService.fetchById(id);
 	}
+	//Fetch Multiple data
 	@GetMapping("/All")
 	public List<LibraryManagementDto> fetchAll(){
 		return libraryManagementService.fetchAll();
 	}
-	
+	//Delete data by id using @Pathvariable
 	@DeleteMapping("/{id}")
 	public String deleteById(@PathVariable int id) {
 //		int id=libraryManagementDto.getBookId();
 		return libraryManagementService.deleteById(id);
 	}
+
+	//Delete All the data
 	@DeleteMapping("/deleteAll")
 	public String deleteAll() {
 		return libraryManagementService.deleteAll();
