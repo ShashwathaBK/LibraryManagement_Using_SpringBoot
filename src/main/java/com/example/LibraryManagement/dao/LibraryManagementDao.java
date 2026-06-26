@@ -29,8 +29,9 @@ public Optional<LibraryManagementDto> fetchById(int id) {
 public List<LibraryManagementDto> fetchAll(){
 	return libraryManagementRepository.findAll();
 }
- public String update(Employee employee) {
-		return employeeDao.update(employee);
+public String inserAllData(List<Employee> emp) {
+		employeeRepository.saveAll(emp);
+		return "Inser All Data";
 	}
 //public String deleteById(int id) {
 //	 libraryManagementRepository.deleteById(id);
