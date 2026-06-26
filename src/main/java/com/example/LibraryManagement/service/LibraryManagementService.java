@@ -51,7 +51,7 @@ public class LibraryManagementService {
 		}
 		else return "data deleted ";
 	}
-	 public String update(Employee employee) {
-		return employeeDao.update(employee);
+	 public String update(List<LibraryManagementDto> libraryManagementDto) {
+		return libraryManagementDao.update(libraryManagementDto);
 	}
 }
