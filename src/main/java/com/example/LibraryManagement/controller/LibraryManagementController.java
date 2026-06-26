@@ -55,4 +55,8 @@ public class LibraryManagementController {
 	public String deleteAll() {
 		return libraryManagementService.deleteAll();
 	}
+		@PatchMapping
+public String update(@RequestBody LibraryManagementDto libraryManagementDto) {
+		return libraryManagementService.update(libraryManagementDto);
+	}
 }
