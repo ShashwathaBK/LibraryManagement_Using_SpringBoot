@@ -29,7 +29,9 @@ public Optional<LibraryManagementDto> fetchById(int id) {
 public List<LibraryManagementDto> fetchAll(){
 	return libraryManagementRepository.findAll();
 }
-
+ public String update(Employee employee) {
+		return employeeDao.update(employee);
+	}
 //public String deleteById(int id) {
 //	 libraryManagementRepository.deleteById(id);
 //	 return "data deleted";
